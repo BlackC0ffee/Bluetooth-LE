@@ -58,11 +58,23 @@ Start Wireshark and listen to the traffic using the nRF52840 Dongle. Select the 
 
 Capture the data and use a filter `btatt.value` to filter the package that contain data. In the picture you can see the Service ID fff0 that we had discovered in the previous part. As we want to export the data, we configure it as a column.
 
-![Filtered BLE data](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-setcolumn?raw=true)
+![Filtered BLE data](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-setcolumn.png?raw=true)
 
 Select the packets that are needed and export them in a csv format.
 
-![Export to CSV](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-setcolumn?raw=true)
+![Export to CSV](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-exporttocsv.png?raw=true)
+
+Opening the CSV, you can notice a pattern
+
+![Excel pattern](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/Excel-csvpattern.png?raw=true)
+
+The master sends `0x0f050400000005ffff` and receives data back that isn't completely random.
+
+During the capture a picture was taken from the mobile app and the csv data is filtered so only the slave data is kept. The numbers in the picture are also converted to hexadecimal values and checking the data we are able to find the line that contains the data.
+
+![Decoding the Hex Data](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/decode-hex-data.png?raw=true)
+
+The first part is probably a key to identify the device and the last part is probably some sort of value to calculate the power factor.
 
 ## Resources
 
