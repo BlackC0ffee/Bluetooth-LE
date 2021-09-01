@@ -25,7 +25,7 @@ The device we want to connect to is B0:B1:13:71:C8:E9 which is a "smart power so
 
 Next you need to connect to the device using the command `connect`
 
-![gatttool -i hci0 -b B0:B1:13:71:C8:E9 -I](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/gatttool - connect.png?raw=true)
+![gatttool -i hci0 -b B0:B1:13:71:C8:E9 -I](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/gatttool-connect.png?raw=true)
 
 Once connected you can read the primary profiles using the command `primary`
 
