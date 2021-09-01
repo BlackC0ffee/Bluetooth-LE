@@ -7,14 +7,14 @@ def ReturnVoltCraftObject( str ):
         Voltage = int(str[16:-20], 16)
         Current = int(str[18:-16], 16)/100
         Frequency = int(str[22:-14], 16)
-        print(f'Watt {Wattage} W, Voltage {Voltage} V, Current {Current} A, Frequency {Frequency} Hz')
+        return Wattage, Voltage, Current, Frequency
     else:
-        print(f'Not a valid input')
-    return
+        raise Exception("Input length is not 38")
 
 
 with open('VoltcraftData\Wireshark Voltcraft Export.csv') as csvFile:
     for index, row in enumerate(csv.reader(csvFile, delimiter=',')):
-        if index > 0 and row[2] != 'Master_0xb7d465a0':
+        if index > 0 and row[2] != 'Master_0xb7d465a0' and len(row[11]) == 38:
             print(f'Row {index}, Source {row[2]}')
-            ReturnVoltCraftObject(row[11])
+            Wattage, Voltage, Current, Frequency = ReturnVoltCraftObject(row[11])
+            print(f'Watt {Wattage} W, Voltage {Voltage} V, Current {Current} A, Frequency {Frequency} Hz')
