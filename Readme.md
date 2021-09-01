@@ -76,6 +76,12 @@ During the capture a picture was taken from the mobile app and the csv data is f
 
 The first part is probably a key to identify the device and the last part is probably some sort of value to calculate the power factor.
 
+### Test one - convert raw csv data to human readable format
+
+Running `ConvertRawWiresharkCsv.py`, converts the csv values to human readable format
+
+![ConvertRawWiresharkCsv.py output](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/ConvertRawWiresharkCsv_py-to-text.png?raw=true)
+
 ## Resources
 
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
