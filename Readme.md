@@ -92,6 +92,19 @@ Sending character write request `char-write-req 0x002b 0f050400000005ffff` resul
 
 ![Test two output - wireshark](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-char-write-req.png?raw=true)
 
+### Test tree - Connect using python script
+
+On the Rpi Add user to the correct groups
+
+```bash
+sudo usermod -a -G bluetooth $USER
+sudo reboot
+```
+
+Install the required libraries with `pip3 install --upgrade adafruit-blinka-bleio adafruit-circuitpython-ble`
+
+Connect using `VoltcraftConnect.py`
+
 ## Resources
 
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
