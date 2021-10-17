@@ -10,12 +10,14 @@ from adafruit_ble.characteristics.int import Uint8Characteristic
 #https://github.com/adafruit/Adafruit_CircuitPython_BLE/tree/main/adafruit_ble
 #https://github.com/adafruit/Adafruit_CircuitPython_BLE_BerryMed_Pulse_Oximeter/
 
+#https://github.com/adafruit/Adafruit_CircuitPython_BLE_Adafruit/tree/main/adafruit_ble_adafruit
+
 class VoltCraftSeM6000(Service):
     uuid = StandardUUID(0xFFF0)
 
     device_data = Uint8Characteristic(uuid=(StandardUUID(0X002B)), properties = Characteristic.WRITE)
 
-    device_data.
+    #device_data.
 
     def __init__(self, service=None):
         super().__init__(service=service)
