@@ -36,8 +36,8 @@ if Voltcraft.connected:
         print("No device information")
     
 
-#voltcraft_service = Voltcraft[VoltCraftSeM6000]
-#voltcraft_service.data
+    voltcraft_service = Voltcraft[VoltCraftSeM6000]
+    voltcraft_service.data
 
 if Voltcraft.connected:
     Voltcraft.disconnect()

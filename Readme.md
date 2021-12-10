@@ -105,6 +105,11 @@ Install the required libraries with `pip3 install --upgrade adafruit-blinka-blei
 
 Connect using `VoltcraftConnect.py`
 
+## To Investigate
+
+https://github.com/hbldh/bleak
+https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial
+
 ## Resources
 
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
