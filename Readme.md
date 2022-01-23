@@ -130,5 +130,6 @@ https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/
 - <https://www.jaredwolff.com/get-started-with-bluetooth-low-energy/>
 - [Bleak library](https://github.com/hbldh/bleak/tree/master)
 - <https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html>
+- <https://www.agnosticdev.com/content/how-capture-bluetooth-traffic-tcpdump-linux>
 
 [^1]: https://btprodspecificationrefs.blob.core.windows.net/assigned-numbers/Assigned%20Number%20Types/Generic%20Access%20Profile.pdf
