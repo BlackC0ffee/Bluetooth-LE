@@ -105,6 +105,19 @@ Install the required libraries with `pip3 install --upgrade adafruit-blinka-blei
 
 Connect using `VoltcraftConnect.py`
 
+### Test four - Connect using python script twoo
+
+On the Rpi Add user to the correct groups
+
+```bash
+sudo usermod -a -G bluetooth $USER
+sudo reboot
+```
+
+Install the required libraries with `pip3 install pip install bleak`
+
+Connect using `VoltcraftBleak.py`
+
 ## To Investigate
 
 https://github.com/hbldh/bleak
@@ -115,5 +128,8 @@ https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
 - [Adafruit - Reverse Engineering a Bluetooth Low Energy Light Bulb](https://learn.adafruit.com/reverse-engineering-a-bluetooth-low-energy-light-bulb)
 - <https://www.jaredwolff.com/get-started-with-bluetooth-low-energy/>
+- [Bleak library](https://github.com/hbldh/bleak/tree/master)
+- <https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html>
+- <https://www.agnosticdev.com/content/how-capture-bluetooth-traffic-tcpdump-linux>
 
 [^1]: https://btprodspecificationrefs.blob.core.windows.net/assigned-numbers/Assigned%20Number%20Types/Generic%20Access%20Profile.pdf
