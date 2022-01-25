@@ -76,13 +76,13 @@ During the capture a picture was taken from the mobile app and the csv data is f
 
 The first part is probably a key to identify the device and the last part is probably some sort of value to calculate the power factor.
 
-### Test one - convert raw csv data to human readable format
+### Test One - Convert raw csv data to human readable format
 
 Running `ConvertRawWiresharkCsv.py`, converts the csv values to human readable format
 
 ![ConvertRawWiresharkCsv.py output](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/ConvertRawWiresharkCsv_py-to-text.png?raw=true)
 
-### Test two - send command to device
+### Test Two - Send command to device
 
 Start scan using Wireshark and connect to the device using a `sudo gatttool -i hci0 -b B0:B1:13:71:C8:E9 -I` and connect using the command `connect`
 
@@ -92,7 +92,7 @@ Sending character write request `char-write-req 0x002b 0f050400000005ffff` resul
 
 ![Test two output - wireshark](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-char-write-req.png?raw=true)
 
-### Test Three  Send and receive message using a python script
+### Test Three - Send and receive message using a python script
 
 On the Rpi Add user to the correct groups
 
