@@ -76,13 +76,13 @@ During the capture a picture was taken from the mobile app and the csv data is f
 
 The first part is probably a key to identify the device and the last part is probably some sort of value to calculate the power factor.
 
-### Test one - convert raw csv data to human readable format
+### Test One - Convert raw csv data to human readable format
 
 Running `ConvertRawWiresharkCsv.py`, converts the csv values to human readable format
 
 ![ConvertRawWiresharkCsv.py output](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/ConvertRawWiresharkCsv_py-to-text.png?raw=true)
 
-### Test two - send command to device
+### Test Two - Send command to device
 
 Start scan using Wireshark and connect to the device using a `sudo gatttool -i hci0 -b B0:B1:13:71:C8:E9 -I` and connect using the command `connect`
 
@@ -92,7 +92,7 @@ Sending character write request `char-write-req 0x002b 0f050400000005ffff` resul
 
 ![Test two output - wireshark](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/wireshark-char-write-req.png?raw=true)
 
-### Test tree - Connect using python script
+### Test Three - Send and receive message using a python script
 
 On the Rpi Add user to the correct groups
 
@@ -101,22 +101,11 @@ sudo usermod -a -G bluetooth $USER
 sudo reboot
 ```
 
-Install the required libraries with `pip3 install --upgrade adafruit-blinka-bleio adafruit-circuitpython-ble`
-
-Connect using `VoltcraftConnect.py`
-
-### Test four - Connect using python script twoo
-
-On the Rpi Add user to the correct groups
-
-```bash
-sudo usermod -a -G bluetooth $USER
-sudo reboot
-```
-
-Install the required libraries with `pip3 install pip install bleak`
+Install the required libraries with `pip3 install bleak --upgrade`
 
 Connect using `VoltcraftBleak.py`
+
+![Test Three output - VoltcraftBleak.py](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/VoltcraftBleak-output.png?raw=true)
 
 ## To Investigate
 
@@ -127,9 +116,9 @@ https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/
 
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
 - [Adafruit - Reverse Engineering a Bluetooth Low Energy Light Bulb](https://learn.adafruit.com/reverse-engineering-a-bluetooth-low-energy-light-bulb)
-- <https://www.jaredwolff.com/get-started-with-bluetooth-low-energy/>
+- [How to Get Started with Bluetooth Low Energy on Linux](https://www.jaredwolff.com/get-started-with-bluetooth-low-energy/)
 - [Bleak library](https://github.com/hbldh/bleak/tree/master)
-- <https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html>
-- <https://www.agnosticdev.com/content/how-capture-bluetooth-traffic-tcpdump-linux>
+- [GATT - Services and Characteristics](https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html)
+- [How to Capture Bluetooth Traffic with TCPDump on Linux](https://www.agnosticdev.com/content/how-capture-bluetooth-traffic-tcpdump-linux)
 
 [^1]: https://btprodspecificationrefs.blob.core.windows.net/assigned-numbers/Assigned%20Number%20Types/Generic%20Access%20Profile.pdf
