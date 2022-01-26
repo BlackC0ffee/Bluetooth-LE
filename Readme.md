@@ -40,6 +40,12 @@ The four last numbers of the first block are referring to the services specified
 - 180a = Device Information
 - fff0 = Not a standard UUID Number
 
+#### Characteristics
+
+Find all characteristics of the "Vendor" Service: `characteristics 0x0023 0xffff`
+
+![Primary output](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/Characteristics-output.png?raw=true)
+
 ## Sniffing BLE
 
 In our previous example we noticed that the Voltcraft power socket was using their own standard to communicate over Bluetooth. In this step we will capture (sniff) the traffic and try to reverse engineer the data.
@@ -107,11 +113,6 @@ Connect using `VoltcraftBleak.py`
 
 ![Test Three output - VoltcraftBleak.py](https://github.com/BlackC0ffee/Bluetooth-LE/blob/master/Media/VoltcraftBleak-output.png?raw=true)
 
-## To Investigate
-
-https://github.com/hbldh/bleak
-https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial
-
 ## Resources
 
 - [Adafruit - Introduction to Bluetooth Low Energy](https://learn.adafruit.com/introduction-to-bluetooth-low-energy)
@@ -120,5 +121,6 @@ https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/
 - [Bleak library](https://github.com/hbldh/bleak/tree/master)
 - [GATT - Services and Characteristics](https://www.oreilly.com/library/view/getting-started-with/9781491900550/ch04.html)
 - [How to Capture Bluetooth Traffic with TCPDump on Linux](https://www.agnosticdev.com/content/how-capture-bluetooth-traffic-tcpdump-linux)
+- [Bluetooth low energy Services, a beginner's tutorial](https://devzone.nordicsemi.com/nordic/short-range-guides/b/bluetooth-low-energy/posts/ble-services-a-beginners-tutorial)
 
 [^1]: https://btprodspecificationrefs.blob.core.windows.net/assigned-numbers/Assigned%20Number%20Types/Generic%20Access%20Profile.pdf
